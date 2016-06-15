@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hover.css Examples</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/hover.css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+	<style>
+		body{
+			padding-top: 50px;
+		}
+		.button{
+			display:inline-block;
+			padding: 1em;
+			background-color: #79BD9A;
+			text-decoration: none;
+			color: #fff;
+		}
+	</style>
+  </head>
+  <body>
+ 	<div class="container">
+ 	<h4>Thanks to <strong>Ian Lunn<strong> and his <a href="http://ianlunn.co.uk/articles/hover-css-tutorial-introduction/">hover.css</a></h4>
+ 		<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-float">
+.hvr-float
+</button>
+<pre><code>
+.hvr-float {
+display: inline-block;
+vertical-align: middle;
+transform: translateZ(0);
+box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+backface-visibility: hidden;
+-moz-osx-font-smoothing: grayscale;
+transition-duration: 0.3s;
+transition-property: transform;
+transition-timing-function: ease-out;
+}
+
+.hvr-float:hover,
+.hvr-float:focus,
+.hvr-float:active {
+transform: translateY(-8px);
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-sink">
+.hvr-sink
+</button>
+<pre><code>
+.hvr-sink{
+	display: inline-block;
+	vertical-align:middle;
+	transform: translateZ(0);
+	box-shadow:0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-smoothing: grayscale;
+	transition-duration: 0.3s;
+	transition-property: transform;
+	transition-timing-function: ease-out
+}
+
+.hvr-sink:hover,
+.hvr-sink:focus,
+.hvr-sink:active{
+	transform: TranslateY(8px);
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-bob">
+.hvr-bob
+</button>
+<pre><code>
+.hvr-bob{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.hvr-bob:hover,
+.hvr-bob:focus,
+.hvr-bob:active{
+	animation-name: hvr-bob-float, hvr-bob;
+	animation-duration: .3s, 1.5s;
+	animation-delay: 0s, .3s;
+	animation-timing-funtion: ease-out, ease-in-out;
+	animation-iteration-count: 1, infinite;
+	animation-fill-mode: forward;
+	animation-direction: normal, alternate;
+}
+
+@keyframe hvr-bob-float{
+	100%{
+	transform: translateY(-8px);
+	}
+}
+
+@keyframes hvr-bob{
+	0%{
+	transform: translateY(-8px);
+	}
+	50%{
+	transform: translateY(-4px);
+	}
+	100%{
+	transform: translateY(-8px);
+	}
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-grow">
+.hvr-grow
+</button>
+<pre><code>
+.hvr-grow{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-duration: .3s;
+	transition-property: transform;
+	transition-timing-function: ease-out;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active{
+	transform:scale(1.1);
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-pulse">
+.hvr-pulse
+</button>
+<pre><code>
+.hvr-pulse{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.hvr-pulse:hover,
+.hvr-pulse:focus,
+.hvr-pulse:active{
+	animation-name: hvr-pulse;
+	aniamtion-duration: 1s;
+	animation-timing-functino: linear;
+	animaiton-iteration-count: infinite;
+}
+
+@keyframes hvr-pulse{
+	25%{
+	transform: scale(1.1);
+	}
+	75%{
+	transform: scale(0.9);
+	}
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-rotate">
+.hvr-rotate
+</button>
+<pre><code>
+.hvr-rotate{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-duration: .3s;
+	transition-property: transform;
+}
+
+.hvr-rotate:hover,
+.hvr-rotate:focus,
+.hvr-rotate:active{
+	transform: rotate(4deg);
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-skew-forward">
+.hvr-skew-forward
+</button>
+<pre><code>
+.hvr-skew-forward{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-duration: .3s;
+	transition-property: transform;
+	transform-origin: 0 100%;
+}
+
+.hvr-skew-forward:hover,
+.hvr-skew-forward:focus,
+.hvr-skew-forward:active{
+	transform: skew(-10deg);
+}
+</code></pre>
+</div>
+
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-wobble-horizontal">
+.hvr-wobble-horizontal
+</button>
+<pre><code>
+.hvr-wobble-horizontal{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+
+}
+
+.hvr-wobble-horizontal:hover,
+.hvr-wobble-horizontal:focus,
+.hvr-wobble-horizontal:active{
+	animation-name: hvr-wobble-horizontal;
+	animation-duration:1s;
+	animation-timing-function:ease-in-out;
+	animation-iteration-count:1;
+}
+@keyframes hvr-wobble-horizontal{
+	16.65%{
+		transform: translateX(8px);
+	}
+	33.3%{
+		transform: translateX(-6px);
+	}
+	49.95{
+		transform: translateX(4px);
+	}
+	66.6%{
+		transform: translateX(-2px);
+	}
+	83.25%{
+		transform: translateX(1px);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-wobble-skew">
+.hvr-wobble-skew
+</button>
+<pre><code>
+.hvr-wobble-skew{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.hvr-wobble-skew:hover,
+.hvr-wobble-skew:focus,
+.hvr-wobble-skew:active{
+	animation-name:hvr-wobble-skew;
+	animation-duration:1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+}
+
+@keyframes hvr-wobble-skew{
+	16.65%{
+		transform: skew(-12deg);
+	}
+	33.3%{
+		transform: skew(10deg);
+	}
+	49.95{
+		transform: skew(-6deg);
+	}
+	66.6%{
+		transform: skew(4deg);
+	}
+	83.25%{
+		transform: skew(-2deg);
+	}
+	100%{
+		transform: skew(0);
+	}
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-buzz-out">
+.hvr-buzz-out
+</button>
+<pre><code>
+.hvr-buzz-out{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.hvr-buzz-out:hover,
+.hvr-buzz-out:focus,
+.hvr-buzz-out:active{
+	animation-name: hvr-buzz-out;
+	animation-duration: 0.75s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+}
+
+@keyframes hvr-buzz-out{
+	10%{
+		transform: translateX(3px) rotate(2deg);
+	}
+	20%{
+		transform: translateX(-3px) rotate(-2deg);
+	}
+	30%{
+		transform: translateX(3px) rotate(2deg);
+	}
+	40%{
+		transform: translateX(-3px) rotate(-2deg);
+	}
+	50%{
+		transform: translateX(2px) rotate(1deg);
+	}
+	60%{
+		transform: translateX(-2px) rotate(-1deg);
+	}
+	70%{
+		transform: translateX(2px) rotate(1deg);
+	}
+	80%{
+		transform: translateX(-2px) rotate(-1deg);
+	}
+	90%{
+		transform: translateX(1px) rotate(0deg);
+	}
+	100%{
+		transform: translateX(-1px) rotate(-0deg);
+	}
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-fade">
+.hvr-fade
+</button>
+<pre><code>
+.hvr-fade{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	overflow:hidden;
+	transition-duration: 0.3s;
+	transition-property: color, background-color;
+}
+
+.hvr-fade:hover,
+.hvr-fade:focus,
+.hvr-fade:active{
+	background-color: #2098d1;
+	color: #fff;
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-back-pulse">
+.hvr-back-pulse
+</button>
+<pre><code>
+.hvr-back-pulse{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	overflow: hidden;
+	transition-duration: 0.5s;
+	transition-property: color, background-color;
+}
+
+.hvr-back-pulse:hover,
+.hvr-back-pulse:focus,
+.hvr-back-pulse:active{
+	animation-name: hvr-back-pulse;
+	animation-duration:1s;
+	animation-delay: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	background-color: #2098d1;
+	color: #fff;
+}
+@keyframes hvr-back-pulse{
+	50%{
+		background-color: rgba(32,152,209,0.75);
+	}
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-sweep-to-right">
+.hvr-sweep-to-right
+</button>
+<pre><code>
+.hvr-sweep-to-right{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-duration: 0.3s;
+	transition-property: color;
+	transition-timing-function: ease-out;
+	position: relative;
+}
+.hvr-sweep-to-right:before{
+	content:"";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right:0;
+	bottom:0;
+	background-color:#2098d1;
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-right:hover,
+.hvr-sweep-to-right:focus,
+.hvr-sweep-to-right:active{
+	color:white;
+}
+.hvr-sweep-to-right:hover:before,
+.hvr-sweep-to-right:focus:before,
+.hvr-sweep-to-right:active:before{
+	transform: scaleX(1);
+}
+</code></pre>
+</div> 
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-bounce-to-right">
+.hvr-bounce-to-right
+</button>
+<pre><code>
+.hvr-bounce-to-right{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position:relative;
+	transition-property: color;
+	transition-duration: 0.5s;
+}
+.hvr-bounce-to-right:before{
+	content:"";
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	background-color: #2098d1;
+	transform: skewX(0);
+	transform-origin: 0 50%;
+	transition-property: transform;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.hvr-bounce-to-right:hover,
+.hvr-bounce-to-right:focus,
+.hvr-bounce-to-right:active{
+	color: #fff;
+}
+
+.hvr-bounce-to-right:hover:before,
+.hvr-bounce-to-right:focus:before,
+.hvr-bounce-to-right:active:before{
+	transform: scaleX(1);
+}
+</code></pre>
+</div>			
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-radial-out">
+.hvr-radial-out
+</button>
+<pre><code>
+.hvr-radial-out{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position:relative;
+	overflow: hidden;
+	transition-property: color;
+	transition-duration: 0.3s;
+}
+.hvr-radial-out:before{
+	content:"";
+	position:absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #2098d1;
+	border-radius: 100%
+	transform: scale(0);
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+.hvr-radial-out:hover,
+.hvr-radial-out:focus,
+.hvr-radial-out:active{
+	color:#fff;
+}
+
+.hvr-radial-out:hover:before,
+.hvr-radial-out:focus:before,
+.hvr-radial-out:active:before{
+	transform:scale(2);
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-shutter-in-horizontal">
+.hvr-shutter-in-vertical
+</button>
+<pre><code>
+.hvr-shutter-in-vertical{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-property: color;
+	transition-duration: 0.3s;
+	position:relative;
+}
+.hvr-shutter-in-vertical:before{
+	content:"";
+	position:absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #2098d1;
+	transform:scaleY(1);
+	transform-origin: 50%;
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+.hvr-shutter-in-vertical:hover,
+.hvr-shutter-in-vertical:focus,
+.hvr-shutter-in-vertical:active{
+	color:#fff;
+}
+
+.hvr-shutter-in-vertical:hover:before,
+.hvr-shutter-in-vertical:focus:before,
+.hvr-shutter-in-vertical:active:before{
+	transform:scaleY(0);
+}
+</code></pre>
+</div>
+
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-border-fade">
+.hvr-border-fade
+</button>
+<pre><code>
+.hvr-border-fade{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-duration: 0.3s;
+	transition-property: box-shadow;
+	box-shadow: inset 0 0 0 4px #e1e1e1;
+}
+
+.hvr-border-fade:hover,
+.hvr-border-fade:focus,
+.hvr-border-fade:active{
+	box-shadow: inset 0 0 0 4px #2098d1;
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-trim">
+.hvr-trim
+</button>
+<pre><code>
+.hvr-trim{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+}
+
+.trim:before{
+	content:"";
+	position:absolute;
+	border:white solid 4px;
+	top:4px;
+	bottom:4px;
+	left:4px;
+	right:4px;
+	opacity:0;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+}
+
+.hvr-trim:hover:before,
+.hvr-trim:focus:before,
+.hvr-trim:active:before{
+	opacity: 1;
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-ripple-out">
+.hvr-ripple-out
+</button>
+<pre><code>
+.hvr-ripple-out{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+}
+
+.hvr-ripple-out:before{
+	content:"";
+	position: absolute;
+	border:#e1e1e1 solid 6px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	animation-duration: 1s;
+}
+
+.hvr-ripple-out:hover:before,
+.hvr-ripple-out:focus:before,
+.hvr-ripple-out:active:before{
+	animation-name: hvr-ripple-out;
+}
+
+@keyframes hvr-ripple-out{
+	100%{
+		top: -12px;
+		right: -12px;
+		left: -12px;
+		bottom: -12px;
+		opacity: 0;
+	}
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-underline-from-left">
+.hvr-underline-from-left
+</button>
+<pre><code>
+.hvr-underline-from-left{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position:relative;
+	overflow: hidden;
+}
+
+.hvr-underline-from-left:before{
+	content:"";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 100%;
+	bottom: 0;
+	background-color: #2098d1;
+	height: 4px;
+	transition-property: right;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-left:hover:before,
+.hvr-underline-from-left:focus:before,
+.hvr-underline-from-left:active:before{
+	right: 0;	
+}
+</code></pre>
+</div>
+
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-reveal">
+.hvr-reveal
+</button>
+<pre><code>
+.hvr-reveal{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	border: 0px solid #2098d1;
+	transition: border-width .1s ease-out;
+}
+
+.hvr-reveal:hover,
+.hvr-reveal:focus,
+.hvr-reveal:active{
+	border-width: 4px;
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-shadow">
+.hvr-shadow
+</button>
+<pre><code>
+.hvr-shadow{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition: box-shadow 0.3s;
+}
+
+.hvr-shadow:hover,
+.hvr-shadow:focus,
+.hvr-shadow:active{
+	box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5);
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-grow-shadow">
+.hvr-grow-shadow
+</button>
+<pre><code>
+.hvr-grow-shadow{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition: all 0.3s;
+}
+
+.hvr-grow-shadow:hover,
+.hvr-grow-shadow:focus,
+.hvr-grow-shadow:active{
+	box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5);
+	transform: scale(1.1);
+}
+</code></pre>
+</div>
+
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-float-shadow">
+.hvr-float-shadow
+</button>
+<pre><code>
+.hvr-float-shadow{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	transition:transform 0.3s;
+}
+.hvr-float-shadow:before{
+	position:absolute;
+	z-index: -1;
+	content: "";
+	top: 100%;
+	left: 5%;
+	height: 10px;
+	widows: 90%;
+	opacity: 0;
+	background: radial-gradient(rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 80%);
+	transition: all 0.3s;
+}
+
+.hvr-float-shadow:hover,
+.hvr-float-shadow:focus,
+.hvr-float-shadow:active{
+	transform:translateY(-5px);
+}
+
+.hvr-float-shadow:hover:before,
+.hvr-float-shadow:focus:before,
+.hvr-float-shadow:active:before{
+	opacity: 1;
+	transform: translateY(5px);
+}
+</code></pre>
+</div>
+
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-glow">
+.hvr-glow
+</button>
+<pre><code>
+.hvr-glow{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition: box-shadow 0.3s;
+}
+
+.hvr-glow:hover,
+.hvr-glow:focus,
+.hvr-glow:active{
+	box-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-shadow-radial">
+.hvr-shadow-radial
+</button>
+<pre><code>
+.hvr-shadow-radial{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position:relative;
+}
+
+.hvr-shadow-radial:before, .hvr-shadow-raidal:after{
+	pointer-events: none;
+	position:absolute;
+	content:"";
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	height: 5px;
+	opacity: 0;
+	transition:opacity 0.3s;
+}
+.hvr-shadow-radial:before{
+	bottom: 100%;
+	background:radial-gradient(at 50% 150%, rgba(0,0,0,0.6), rgba(0,0,0,0) 80%);
+}
+
+.hvr-shadow-radial:after{
+	top:100%;
+	background: radial-gradient(at 50% -50%, rgba(0,0,0,0.6), rgba(0,0,0,0) 80%);
+}
+
+.hvr-shadow-radial:hover:before,
+.hvr-shadow-radial:focus:before,
+.hvr-shadow-radial:active:before,
+.hvr-shadow-radial:hover:after,
+.hvr-shadow-radial:focus:after,
+.hvr-shadow-radial:active:after,
+{
+	opacity:1;
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-bubble-top">
+.hvr-bubble-top
+</button>
+<pre><code>
+.hvr-bubble-top{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position:relative;
+}
+
+.hvr-bubble-top;before{
+	content: "";
+	pointer-events: none;
+	position:absolute;
+	z-index: -1;
+	top: 0;
+	left: calc(50% - 10px);
+	border-style:solid;
+	border-width:0 10px 10px 10px;
+	border-color: transparent transparent #e1e1e1 transparent;
+	transition:transform .3s;
+}
+
+.hvr-bubble-top:hover:before,
+.hvr-bubble-top:focus:before,
+.hvr-bubble-top:active:before{
+	transform: translateY(-10px);
+}
+</code></pre>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-bubble-float-top">
+.hvr-bubble-float-top
+</button>
+<pre><code>
+.hvr-bubble-float-top{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position:relative;
+	transition: transform 0.3s;
+}
+.hvr-bubble-float-top:before{
+	content:"";
+	position:absolute;
+	top: 0;
+	left: calc(50%-10px);
+	border-style: solid;
+	border-width: 0 10px 10px 10px;
+	border-color: transparent transparent #e1e1e1 transparent;
+	transition: transform 0.3s;
+}
+
+.hvr-bubble-float-top:hover,
+.hvr-bubble-float-top:focus,
+.hvr-bubble-float-top:active{
+	transform: translateY(10px);
+}
+
+.hvr-bubble-float-top:hover:before,
+.hvr-bubble-float-top:focus:before,
+.hvr-bubble-float-top:active:before{
+	transform: translateY(-10px);
+}
+</code></pre>
+</div>
+
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<button type="button" class="btn btn-default btn-primary hvr-curl-top-left">
+.hvr-curl-top-left
+</button>
+<pre><code>
+.hvr-curl-top-left{
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0,0,0,0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position:relative;
+}
+.hvr-curl-top-left:before{
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	background-color: #fff;
+	background: linear-gradient(135deg, #fff 45%, #aaa 50%, #ccc 56%, #fff 80%);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+	transition: all, 0.3s;
+}
+
+.hvr-curl-top-left:hover:before,
+.hvr-curl-top-left:focus:before,
+.hvr-curl-top-left:active:before{
+	width: 25px;
+	height: 25px;
+}
+</code></pre>
+</div>
+ 		</div>
+ 	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
+</html>
